@@ -7,12 +7,12 @@ import { Card1 } from './card';
 import {Keyboard, Pagination, Navigation} from "swiper";
 import CardProps2 from '@/components/card_props2'
 import Layout from '@/components/layout';
-import PictureCard from './picturecard';
-import Mainpage, { MainPage1 } from './mainpage';
+
 import 'swiper/css';
-import { useRef } from 'react';
-export default function Home() {
-  
+
+export default function Home({data}) {
+
+ 
   
   return (
     <>
@@ -23,9 +23,39 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
+      <Swiper
+      direction={"vertical"}
+      
+      slidesPerView={1}
+      height = {"1580"}
 
-        <Features/>
+      keyboard={{
+        enabled: true,
+      }}
+      modules={[Keyboard, Pagination, Navigation]}
+    >
+        {data.map((post) => (
+           <SwiperSlide>
+           <Features userName = {post} content = {post}/> 
+         </SwiperSlide>
+        ))}
+         
+       
+      
+        </Swiper>
       </Layout>
     </>
   )
+}
+
+
+export async function getServerSideProps(){
+  const res = await fetch(`http://34.133.106.148:5000/routine`);
+  const data = await res.json();
+
+  return{
+    props: data,
+
+  };
+
 }
