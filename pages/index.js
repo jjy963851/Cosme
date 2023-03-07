@@ -9,8 +9,10 @@ import CardProps2 from '@/components/card_props2'
 import Layout from '@/components/layout';
 import PictureCard from './picturecard';
 import Mainpage, { MainPage1 } from './mainpage';
+import 'swiper/css';
+import { useRef } from 'react';
 export default function Home() {
-
+  
   
   return (
     <>
@@ -21,15 +23,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-      <Features/>
-     
-     
+
+        <Features/>
       </Layout>
-      
-      
-      
-        
-        
     </>
   )
 }

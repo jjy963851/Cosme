@@ -43,32 +43,23 @@ SwiperCore.use([Navigation, Pagination, Keyboard])
       </Head>
       <div className ="container px-5 py-10 mx-auto">
       <Swiper
-        className="mt-4"
-        direction={"vertical"}
-        slidesPerView={1}
-        // navigation={true}
-        keyboard={{
-          enabled: true,
-        }}
-        modules={[Keyboard, Pagination, Navigation]}
-      >
-      {data.map((dt)=>(
-        <SwiperSlide key={dt.userName}>
-          <CardProps2 userName= {dt.userName} content = {dt.content} />
-        </SwiperSlide>
-      ))}
-         <SwiperSlide><Card/></SwiperSlide>
-        {/**
-      <SwiperSlide><Card1/></SwiperSlide>
-      <SwiperSlide><Card/></SwiperSlide>*/}
-      
+      direction={"vertical"}
      
-     <PictureCard imageSrc = "https://picsum.photos/id/188/720/400/" />      
-    <TextCard content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-              modi, expedita quos doloremque autem ipsum itaque incidunt ipsam
-              reprehenderit fuga! Dolores quisquam eius cum accusamus?"/> 
-         
-        </Swiper>
+      slidesPerView={1}
+      height = {"1580"}
+
+      keyboard={{
+        enabled: true,
+      }}
+      modules={[Keyboard, Pagination, Navigation]}
+    >
+
+        <SwiperSlide><Card/></SwiperSlide>
+        <SwiperSlide><Card1/></SwiperSlide>
+        <SwiperSlide>3</SwiperSlide>
+        <SwiperSlide>4</SwiperSlide>
+        <SwiperSlide>5</SwiperSlide>
+    </Swiper>
       </div>
 </div>
     );
