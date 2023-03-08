@@ -6,10 +6,10 @@ export default function Mainpage(){
             Routine Drops   
         </h3>
             <div className = "h-full border-2 border-gray-300 border-opacity-60 rounded-lg overflow-hidden">
-            <img
+            <svg
                 className="w-1/3 h-full
                         object-contain object-center ml-7 rounded-xl"
-                src="https://picsum.photos/id/188/720/400/"
+                src=""
                 alt="card image"
             />
             </div>

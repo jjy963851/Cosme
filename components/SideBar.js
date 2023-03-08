@@ -50,7 +50,7 @@ export default function Sidebar(){
                         focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
                         id="profile"
                         onClick={()=>{setProfileToggle(!profileToggle)}}>
-                        <img className = "h-8 w-8 rounded-full"
+                        <svg className = "h-8 w-8 rounded-full"
                         src=""
                         alt="user data"/>
                         </button>

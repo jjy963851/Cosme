@@ -27,7 +27,7 @@ export default function CardProps(props){
                 </h3>
                 
             {/** object-cover means when the screen size changes, image size also change together */}
-            <img
+            <svg
             className="lg:h-72 md:h-48 w-full 
                        object-cover object-center"
             src={props.ProductImage}
