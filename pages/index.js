@@ -35,7 +35,7 @@ export default function Home({data}) {
       modules={[Keyboard, Pagination, Navigation]}
     >
         {data.map((post) => (
-           <SwiperSlide>
+           <SwiperSlide key={index}>
            <Features userName = {post} content = {post}/> 
          </SwiperSlide>
         ))}
