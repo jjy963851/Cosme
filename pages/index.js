@@ -2,8 +2,7 @@
 import Head from 'next/head'
 import Features from './Features'
 import {Swiper, SwiperSlide} from "swiper/react";
-import Card from './card';
-import { Card1 } from './card';
+
 import {Keyboard, Pagination, Navigation} from "swiper";
 import CardProps2 from '@/components/card_props2'
 import Layout from '@/components/layout';
@@ -50,7 +49,7 @@ export default function Home({projects}) {
 }
 
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
   const res = await fetch(`http://34.133.106.148:5000/routine`);
   const  projects= await res.json();
 

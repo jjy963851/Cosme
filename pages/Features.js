@@ -1,12 +1,9 @@
 import Head from "next/head";
 import CardProps from "@/components/card_props";
-import Card, { Card1 } from "./card";
 import {Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Keyboard } from "swiper";
-import PictureCard from "./picturecard";
 import CardProps2 from "@/components/card_props2";
-import TextCard from "./textcard";
-import { data } from "autoprefixer";
+
 
 
 export default function Features(props){
@@ -39,11 +36,7 @@ export default function Features(props){
               <CardProps key={post.id} productTitle ={post.step_type} ProductImage = {post} ProductName ={post.product_name} BrandName = {post.brand_name} ProductDetail = {post.description}/>
               </SwiperSlide>
           ))} 
-          
-         {/**  <SwiperSlide>
-            <Card key = {post.step_type} post = {post}/>
-          </SwiperSlide>*/} 
-          
+             
       
     </Swiper>
       </div>
