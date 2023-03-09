@@ -35,7 +35,7 @@ export default function Features(props){
           </SwiperSlide>
           
           {post.steps.map((post)=>(
-              <SwiperSlide>
+              <SwiperSlide key = {post.id}>
               <CardProps key={post.id} productTitle ={post.step_type} ProductImage = {post} ProductName ={post.product_name} BrandName = {post.brand_name} ProductDetail = {post.description}/>
               </SwiperSlide>
           ))} 
