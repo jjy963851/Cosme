@@ -27,13 +27,13 @@ export default function Features(props){
     >
        
           <SwiperSlide>
-          <CardProps2  key = {post.id} userName = {post.name} content ={post.description} productType = {post.labels} price = "199.9"/>
+          <CardProps2  key = {post?.id} userName = {post?.name} content ={post?.description} productType = {post?.labels} price = "199.9"/>
           
           </SwiperSlide>
           
-          {post.steps.map((post)=>(
-              <SwiperSlide key = {post.id}>
-              <CardProps key={post.id} productTitle ={post.step_type} ProductImage = {post} ProductName ={post.product_name} BrandName = {post.brand_name} ProductDetail = {post.description}/>
+          {post?.steps.map((post)=>(
+              <SwiperSlide key = {post?.id}>
+              <CardProps key={post?.id} productTitle ={post?.step_type} ProductImage = {post} ProductName ={post?.product_name} BrandName = {post?.brand_name} ProductDetail = {post?.description}/>
               </SwiperSlide>
           ))} 
              
