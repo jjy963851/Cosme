@@ -10,8 +10,8 @@ import { data } from "autoprefixer";
 
 
 export default function Features(props){
-const post= props.post
-  
+    const post = props.post
+    
     return(
 <div>
    
@@ -30,10 +30,20 @@ const post= props.post
     >
        
           <SwiperSlide>
-          <CardProps2 key = {post} userName = {post} content ={post} />
+          <CardProps2  key = {post.id} userName = {post.name} content ={post.description} productType = {post.labels} price = "199.9"/>
+          
           </SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card1/></SwiperSlide>
+          
+          {post.steps.map((post)=>(
+              <SwiperSlide>
+              <CardProps key={post.id} productTitle ={post.step_type} ProductImage = {post} ProductName ={post.product_name} BrandName = {post.brand_name} ProductDetail = {post.description}/>
+              </SwiperSlide>
+          ))} 
+          
+         {/**  <SwiperSlide>
+            <Card key = {post.step_type} post = {post}/>
+          </SwiperSlide>*/} 
+          
       
     </Swiper>
       </div>

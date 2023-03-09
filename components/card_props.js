@@ -23,11 +23,11 @@ export default function CardProps(props){
                 {/**this will be the product title */}
                 
                 <h3 className = " text-2xl font-semibold mb-6">
-                {props.ProductType}
+                {props.productTitle}
                 </h3>
                 
             {/** object-cover means when the screen size changes, image size also change together */}
-            <svg
+            <img
             className="lg:h-72 md:h-48 w-full 
                        object-cover object-center"
             src={props.ProductImage}

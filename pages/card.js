@@ -1,42 +1,19 @@
 import CardProps from "@/components/card_props";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Keyboard, Pagination, Navigation} from "swiper";
+import 'swiper/css';
 import { ArrowRightIcon, EyeIcon, ChatIcon} from "@heroicons/react/outline"
-export default function Card(){
-    return(
-        <div>
-            <CardProps
-            ProductType = "Moisturizer"
-            ProductImage = "https://picsum.photos/id/188/720/400/"
-           ProductName = "Cleanser"
-            BrandName = "Aveeno // brand"
-            ProductDetail = " abasdfljslfjlslflsjfl"
-            Concerns = "Spots"
-            Concerns1 = "Sun Spots"
-            Concerns2 = "Acne"
-            Concerns3 = "Atopic"
-            />
+export default function Card(props){
+    const post = props.post
 
+    return(
+        <div>    
+           {post.steps.map((post)=>(
+              <CardProps key={post.id} productTitle ={post.step_type} ProductImage = {post} ProductName ={post.product_name} BrandName = {post.brand_name} ProductDetail = {post.description}/>
+          ))}
           
         </div>
     );
 }
 
-export  function Card1(){
-    return(
-        <div>
-            <CardProps
-             ProductType = "Cleanser"
-             ProductImage = "https://picsum.photos/id/188/720/400/"
-            ProductName = "Cleanser"
-             BrandName = "Aveeno // brand"
-             ProductDetail = " abasdfljslfjlslflsjfl"
-             Concerns = "Spots"
-             Concerns1 = "Sun Spots"
-             Concerns2 = "Acne"
-             Concerns3 = "Atopic"
-             />
-           
 
-          
-        </div>
-    );
-}

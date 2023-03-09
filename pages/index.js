@@ -10,7 +10,7 @@ import Layout from '@/components/layout';
 
 import 'swiper/css';
 
-export default function Home({data}) {
+export default function Home({projects}) {
 
  
   
@@ -34,9 +34,10 @@ export default function Home({data}) {
       }}
       modules={[Keyboard, Pagination, Navigation]}
     >
-        {data.map((post) => (
-           <SwiperSlide key={post}>
-           <Features userName = {post} content = {post}/> 
+        {projects.data.map((post, index) => (
+           <SwiperSlide key={index}>
+           <Features key = {index} post = {post}/> 
+           
          </SwiperSlide>
         ))}
          
@@ -51,10 +52,10 @@ export default function Home({data}) {
 
 export async function getServerSideProps(){
   const res = await fetch(`http://34.133.106.148:5000/routine`);
-  const data = await res.json();
+  const  projects= await res.json();
 
   return{
-    props: data,
+    props: {projects},
 
   };
 

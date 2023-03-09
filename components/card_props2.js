@@ -1,6 +1,7 @@
 import { ArrowRightIcon, EyeIcon, ChatIcon} from "@heroicons/react/outline"
 
 export default function CardProps2(props){
+   
     return(
  /**padding 4, small size screen, card size will be half of the screen */
         /** this container will make overall card will responsive  */
