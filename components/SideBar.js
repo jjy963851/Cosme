@@ -36,11 +36,7 @@ export default function Sidebar(){
                     onClick={() => setMenuToggle(!menuToggle)}>
                         <HamburgerIcon/>
                     </button>
-                    <div className = "flex items-center text-2xl font-bold ml-3"> 
-                      <Link href ="/" legacybehavior >
-                        Home
-                      </Link>
-                    </div>
+                    
                   </div>
                   {/*right side menu*/}
                    <div>
@@ -88,26 +84,26 @@ export default function Sidebar(){
           
           {/** here is mobile drop down menu */}
           <nav className = "text-white text-base font-semibold bg-gray-500">
-            <a href =""
+            <Link href ="/"
             className ="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6">
               <AdjustIcon className = "mr-3"/>
-              Dashboard
-            </a>
-            <a href =""
+              Home
+            </Link>
+            <Link href =""
             className ="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6">
               <ArchiveBoxIcon className = "mr-3"/>
-              Tables
-            </a>
-            <a href =""
+              About Us
+            </Link>
+            <Link href =""
             className ="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6">
               <PostIcon className = "mr-3"/>
-             Forms
-            </a>
-            <a href =""
+             Submit Your Story
+            </Link>
+            <Link href =""
             className ="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6">
               <ProfileIcon className = "mr-3"/>
-              Profile
-            </a>
+              Collaborate With Us
+            </Link>
           </nav>
           </header>
         </div>

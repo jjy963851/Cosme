@@ -5,35 +5,34 @@ import {Keyboard, Pagination, Navigation} from "swiper";
 import CardProps2 from '@/components/card_props2'
 import Layout from '@/components/layout';
 import 'swiper/css';
+import TextCard from './textcard';
+import CardProps from '@/components/card_props';
 
 export default function Routine({projects}){
     return(
         <>
         <Layout>
-        <Swiper
+           <Swiper
+          
+     slidesPerView={1}
       direction={"vertical"}
-      
-      slidesPerView={1}
-      height = {"1580"}
-
+      autoHeight
+      display ={"block"}
       keyboard={{
         enabled: true,
       }}
-      modules={[Keyboard, Pagination, Navigation]}
+     
+      modules={[Keyboard]}
     >
         {projects.data.map((post, index) => (
            <SwiperSlide key={index}>
-           <Features key = {index} post = {post}/> 
+           <Features key = {index} post = {post} /> 
            
          </SwiperSlide>
         ))}
-         
-       
-      
-        </Swiper> 
 
-
-
+        
+        </Swiper>      
         </Layout>
         </>
 

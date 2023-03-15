@@ -1,11 +1,12 @@
 export default function TextCard(props){
     return(
         <>
-         <div className = "p-4 sm:w-1/2 md:w-auto lg:w-auto">
-         <div className = "h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden py-20 px-3">
+         <div className = "py-40">
+         <div className = " w-1/2 mx-auto border-b-2 border-gray-200  border-opacity-60 rounded-lg overflow-y-hidden">
 
          <p className ="leading-relaxed mb-3 py-10">
-            {props.content}
+            This should be real data.This should be real data.This should be real data.This should be real data.This should be real data.
+            This should be real data.This should be real data.This should be real data.This should be real data.This should be real data.
             </p>
 
             </div>

@@ -10,16 +10,13 @@ export default function CardProps(props){
 
 
 
-
-
-
     return(
          /**padding 4, small size screen, card size will be half of the screen */
         /** this container will make overall card will responsive  */
-        <div className = "p-4 sm:w-1/2 md:w-auto lg:w-auto">
+        <div className = "p-4 sm:w-1/2 md:w-auto lg:w-auto overflow-hidden">
 
             {/** this is image control! height full, border-2 테두리 opacity=투명도 */}
-            <div className = "h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden">
+            <div className = "h-full border-b-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                 {/**this will be the product title */}
                 
                 <h3 className = " text-2xl font-semibold mb-6">
@@ -30,11 +27,11 @@ export default function CardProps(props){
             <img
             className="lg:h-72 md:h-48 w-full 
                        object-cover object-center"
-            src={props.ProductImage}
+            src=""
             alt="card image"
             />
             {/**transition duration = when hover it, the hover effect time? */}
-            <div className =" p-6 hover:bg-indigo-600 hover:text-white transition duration-300 ease-in">
+            <div className =" p-6 hover:bg-indigo-400 hover:text-white transition duration-300 ease-in">
             
             <h2 className = "text-2xl font-semibold mb-2">
              {props.ProductName}
@@ -46,10 +43,10 @@ export default function CardProps(props){
 
             <span className=" mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-t-2 mb-2 border-gray-700">
                 <div className ="flex items-center flex-wrap gap-2 ">
-                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden">{props.Concerns}</span>
-                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden">{props.Concerns1}</span>
-                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden" >{props.Concerns2}</span>
-                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden">{props.Concerns3}</span>
+                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden">sports</span>
+                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden">sports</span>
+                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden" >sports</span>
+                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden">sports</span>
 
 
                 </div>
@@ -77,3 +74,4 @@ export default function CardProps(props){
         </div>
     );
 }
+
