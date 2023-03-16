@@ -13,11 +13,11 @@ export default function Routine({projects}){
         <>
         <Layout>
            <Swiper
-          
-     slidesPerView={1}
+      className = "max-h-screen min-h-screen w-screen md:max-w-lg lg:max-w-4xl mx-auto"     
+     slidesPerView={"auto"}
+     rewind ={true}
       direction={"vertical"}
       autoHeight
-      display ={"block"}
       keyboard={{
         enabled: true,
       }}
@@ -35,6 +35,8 @@ export default function Routine({projects}){
         </Swiper>      
         </Layout>
         </>
+        
+        
 
     );
 }

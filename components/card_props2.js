@@ -5,10 +5,10 @@ export default function CardProps2(props){
     return(
  /**padding 4, small size screen, card size will be half of the screen */
         /** this container will make overall card will responsive  */
-        <div className = " ">
+        <div className = "">
 
             {/** this is image control! height full, border-2 테두리 opacity=투명도 */}
-            <div className = "h-full border-b-2 border-gray-200  border-opacity-60 rounded-lg overflow-y-hidden">
+            <div className = "mt-10 border-b-2 border-gray-200  border-opacity-60 rounded-lg overflow-y-hidden">
                 {/**this will be the product title */}
                 
                 <h3 className = " text-4xl font-semibold my-6">

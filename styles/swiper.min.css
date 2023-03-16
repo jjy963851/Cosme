@@ -1,0 +1,8 @@
+.swiper-container {
+    max-height: fit-content;
+    height: 800px;
+}
+.swiper {
+    max-height: fit-content;
+    height: 500px
+}

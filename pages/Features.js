@@ -13,17 +13,17 @@ export default function Features(props){
     
     return(
 <div>
-   
+{/*p-4 sm:w-1/2  lg:w-4/5*/}
       <Head>
         <title>Card feature</title>
         
       </Head>
-      <div className ="h-full p-4 sm:w-1/2  lg:w-4/5 mx-auto">
+      <div className =" h-auto w-screen px-4 md:max-w-lg lg:max-w-4xl mx-auto">
         
       <Swiper
+      className = "max-h-screen min-h-screen"
       rewind ={true}
-      slidesPerView={1}
-      
+      slidesPerView={"auto"}
       autoHeight
       keyboard={{
         enabled: true,
