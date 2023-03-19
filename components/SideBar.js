@@ -94,7 +94,7 @@ export default function Sidebar(){
               <ArchiveBoxIcon className = "mr-3"/>
               About Us
             </Link>
-            <Link href =""
+            <Link href ="/submit"
             className ="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6">
               <PostIcon className = "mr-3"/>
              Submit Your Story

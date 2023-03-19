@@ -18,6 +18,7 @@ export default function Routine({projects}){
      rewind ={true}
       direction={"vertical"}
       autoHeight
+      speed={1000}
       keyboard={{
         enabled: true,
       }}

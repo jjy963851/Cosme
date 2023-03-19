@@ -1,7 +1,9 @@
 import { ArrowRightIcon, EyeIcon, ChatIcon} from "@heroicons/react/outline"
-
+import Link from "next/link";
+import { useState } from "react";
 export default function CardProps2(props){
    
+    const[isReadMoreShown, setReadMoreShown] = useState(true)
     return(
  /**padding 4, small size screen, card size will be half of the screen */
         /** this container will make overall card will responsive  */
@@ -28,10 +30,13 @@ export default function CardProps2(props){
                 </div>
                 
            {/** here will be the main ocntent and explain */}
-           <p className =" leading-relaxed my-3 p-3">
+           <p className ={` ${isReadMoreShown ? "" : "line-clamp-none"} line-clamp-4 md:line-clamp-none leading-relaxed my-3 `}>
                 {props.content}
-            </p>  
-
+            </p>
+            <button className ="text-gray-500 hover:text-pink-200 trainsition duration-300 ease-in" 
+            onClick={()=>setReadMoreShown(!isReadMoreShown)}>
+                {isReadMoreShown ? "read more..." : "read less..."}
+            </button>
             {/**transition duration = when hover it, the hover effect time? */}
             <div className =" p-6 hover:bg-indigo-600 hover:text-white transition duration-300 ease-in">
 

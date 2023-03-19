@@ -28,6 +28,7 @@ export default function Features(props){
       keyboard={{
         enabled: true,
       }}
+      speed ={1000}
 
       modules={[Keyboard]}
       

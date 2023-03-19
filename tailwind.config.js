@@ -5,12 +5,12 @@ module.exports = {
             './components/**/*.{js,ts,jsx,tsx}',
           ],
   theme: {
-    screens: {
-      'sm' : '576px',
-      'md' : '960px',
-      'lg' : '1440px'
-    },
     extend: {},
   },
-  plugins: [],
+  variants: {
+    lineClamp: ['responsive', 'hover']
+  },
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
