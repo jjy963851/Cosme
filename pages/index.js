@@ -21,7 +21,7 @@ export default function Home({projects}) {
       </Head>
       <Layout>
        <div className="container mx-auto py-5 px-4">
-      <div className="flex flex-wrap -mx-2">
+      <div className="flex flex-wrap">
       
       
        <GPT/>
