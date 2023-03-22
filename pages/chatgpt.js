@@ -11,7 +11,7 @@ export default function GPT(){
 <h1 className = "font-extrabold text-lg lg:text-2xl ">Routine Drops</h1>
 <div className=" mx-10 grid md:flex">
 <Link href = "/routine" legacyBehavior>
-<img src="/img1.jpg" alt="Card image" className="w-2/3 md:h-1/2 md:w-1/3 lg:w-1/6 pb-2 rounded-xl ml-4 transition duration-300 transform hover:scale-105"/>
+<img src="/img1.jpg" alt="Card image" className="w-2/3 md:h-1/2 md:w-1/3 lg:w-1/6 pb-2 rounded-xl ml-2 transition duration-300 transform hover:scale-105"/>
 </Link>
 <div className="flex flex-col w-auto md:w-1/2 md:p-4 lg:w-5/6 ">
 <h2 className="text-xl md:text-2xl font-bold mb-2">Spongebob Square Pants Routine</h2>
@@ -51,7 +51,7 @@ export default function GPT(){
 <h1 className = "font-extrabold text-lg lg:text-2xl ">Local Shop</h1>
 <div className="mx-10 flex flex-col">
 <Link href = "/shop" legacyBehavior>
-<img src="/img1.jpg" alt="Card image" className="ml-4 md:hidden w-2/3  lg:w-1/4 pb-2 rounded-xl transition duration-300 transform hover:scale-105"/>
+<img src="/img1.jpg" alt="Card image" className="ml-2 md:hidden w-2/3  lg:w-1/4 pb-2 rounded-xl transition duration-300 transform hover:scale-105"/>
 </Link>
 <div className = "grid md:flex w-auto gap-x-1 "> 
 <div className="flex flex-col  md:w-1/2 md:p-4 lg:w-1/3">

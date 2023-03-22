@@ -1,6 +1,10 @@
 import { ArrowRightIcon, EyeIcon, ChatIcon} from "@heroicons/react/outline"
 import Link from "next/link";
 import { useState } from "react";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
 export default function CardProps2(props){
    
     const[isReadMoreShown, setReadMoreShown] = useState(true)
@@ -10,23 +14,36 @@ export default function CardProps2(props){
         <div className = "">
 
             {/** this is image control! height full, border-2 테두리 opacity=투명도 */}
-            <div className = "mt-10 border-b-2 border-gray-200  border-opacity-60 rounded-lg overflow-y-hidden">
+            <div className = " mt-10 border-b-2 border-gray-200  border-opacity-60 rounded-lg overflow-y-hidden">
                 {/**this will be the product title */}
                 
                 <h3 className = " text-4xl font-semibold my-6">
                {props.userName}
                 </h3>
-                <div className ="flex items-start flex-wrap ">
-                <a className ="">
-                    
-                 </a>
+                <div className ="flex items-center justify-between flex-wrap ">
+                <div>
                 <a>
-                <EyeIcon className=" w-5 h-5 mr-1 -mt-3" />
+                <FacebookIcon className=" w-5 h-5 mr-1 -mt-3" />
                
                 </a>
                 <a className="">
-                <ChatIcon className="w-5 h-5 mr-1 -mt-3" />
+                <YouTubeIcon className="w-5 h-5 mr-1 -mt-3" />
                 </a>
+
+                <a className="">
+                <InstagramIcon className="w-5 h-5 mr-1 -mt-3" />
+                </a>
+                </div>
+
+                {/*ingredient*/}
+                <div className="pr-10">
+                    <div className ="text-sm font-mono text-slate-400">
+                            #Calsume
+                    </div>
+                    <div className ="text-sm font-mono text-slate-400">
+                            #Vitamine
+                    </div>
+                </div>
                 </div>
                 
            {/** here will be the main ocntent and explain */}
@@ -38,7 +55,7 @@ export default function CardProps2(props){
                 {isReadMoreShown ? "read more..." : "read less..."}
             </button>
             {/**transition duration = when hover it, the hover effect time? */}
-            <div className =" p-6 hover:bg-indigo-600 hover:text-white transition duration-300 ease-in">
+            <div className ={` ${isReadMoreShown ? "" : "hidden"} md:block p-6 `}>
 
            
 

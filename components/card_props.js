@@ -1,14 +1,10 @@
 import { ArrowRightIcon, EyeIcon, ChatIcon} from "@heroicons/react/outline"
 import { stringify } from "querystring";
-
-
-
-
+import { useState } from "react";
 export default function CardProps(props){
+
+    const[isReadMoreShown, setReadMoreShown] = useState(true)
     {/** here will be data call and put in props */}
-
-
-
 
     return(
          /**padding 4, small size screen, card size will be half of the screen */
@@ -25,13 +21,13 @@ export default function CardProps(props){
                 
             {/** object-cover means when the screen size changes, image size also change together */}
             <img
-            className="lg:h-72 md:h-48 w-full 
-                       object-cover object-center"
-            src=""
+            className="w-1/2 mx-auto
+                       "
+            src="https://www.byrdie.com/thmb/gDvPcIIdqlCU_8f3Wz6VUM_uM_A=/800x800/filters:no_upscale():max_bytes(150000):strip_icc()/curologyacnebodywash-240373da3c26495a8957bba626b538a9.jpg"
             alt="card image"
             />
             {/**transition duration = when hover it, the hover effect time? */}
-            <div className =" p-6 hover:bg-indigo-400 hover:text-white transition duration-300 ease-in">
+            <div className =" p-6 ">
             
             <h2 className = "text-2xl font-semibold mb-2">
              {props.ProductName}
@@ -52,22 +48,17 @@ export default function CardProps(props){
                 </div>
                 </span>
 
-            <p className ="leading-relaxed mb-3">
+            <p className ={`${isReadMoreShown ? "" : "line-clamp-none"} line-clamp-4 md:line-clamp-none leading-relaxed mb-3`}>
             {props.ProductDetail}
             </p>
             {/**link and etc */}
                 <div className ="flex items-center flex-wrap">
-                <a className ="text-indigo-600 inline-flex items-center md:mb-2 lg:mb-0 hover:text-white">
-                Read More
+                <button className =" text-gray-500 inline-flex items-center md:mb-2 lg:mb-0 hover:text-pink-200 trainsition duration-300 ease-in"
+                onClick={()=>setReadMoreShown(!isReadMoreShown)}>
+                 {isReadMoreShown ? "A Bit more about the step" : "back to Card"}
                 <ArrowRightIcon className ="w-4 h-4 ml-2"/>
-                </a>
-                <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                <EyeIcon className="w-4 h-4 mr-1" />
-                1.2K
-                </span>
-                <span className="text-gray-400 inline-flex items-center leading-none text-sm">
-                <ChatIcon className="w-4 h-4 mr-1" />6
-                </span>
+                </button>
+                
                 </div>
             </div> 
             </div>
