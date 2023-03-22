@@ -19,7 +19,7 @@ export default function Routine({projects}){
       direction={"vertical"}
       autoHeight
       followFinger={false}
-      threshold = {"50"}
+      threshold = {"200"}
       speed={1000}
       keyboard={{
         enabled: true,
