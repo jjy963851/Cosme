@@ -18,8 +18,8 @@ export default function Routine({projects}){
      rewind ={true}
       direction={"vertical"}
       autoHeight
-      followFinger={false}
-      threshold = {"200"}
+      
+      threshold = {"20"}
       speed={1000}
       keyboard={{
         enabled: true,
