@@ -15,8 +15,8 @@ export default function PictureCard(props){
         setComment('');
     }
     return(
-        <>
-         <div className = "border-b-2border-gray-200 border-opacity-60 rounded-lg overflow-hidden pt-10 ">
+        <div className ="min-w-min">
+         <div className = "h-full border-b-2border-gray-200 border-opacity-60 rounded-lg overflow-hidden mt-10 ">
          <div className = "flex items-center flex-col">
          <img
             className="w-1/2 mx-auto lg:w-1/2 pb-2 rounded-xl"
@@ -40,7 +40,7 @@ export default function PictureCard(props){
             <button
             type="button"
             className ={`${comment.length >0 ? "submitCommentActive" : "submitCommentInactive"} 
-           px-3 py-1 ml-3 lg:px-5 text-white bg-slate-400 rounded-lg shadow-lg transform hover:scale-105 
+           px-3 py-1 lg:px-5 text-white bg-slate-400 rounded-lg shadow-lg transform hover:scale-105 
             `}
             onClick ={post}
             disabled={isValid ? false : true}
@@ -62,7 +62,7 @@ export default function PictureCard(props){
                  </div> 
           </div>
          </div>
-        </>
+        </div>
     );
 }
 
