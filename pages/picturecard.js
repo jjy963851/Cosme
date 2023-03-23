@@ -16,18 +16,18 @@ export default function PictureCard(props){
     }
     return(
         <>
-         <div className = " ">
-         <div className = "mx-auto border-b-2border-gray-200 border-opacity-60 rounded-lg overflow-hidden ">
+         <div className = "border-b-2border-gray-200 border-opacity-60 rounded-lg overflow-hidden pt-10 ">
+         <div className = "flex items-center flex-col">
          <img
-            className="w-1/2 mx-auto lg:w-1/2 pb-2 rounded-xl "
+            className="w-1/2 mx-auto lg:w-1/2 pb-2 rounded-xl"
             src="/img1.jpg"
             alt="card image"
             
             />
-            
+            <div className="">
             <input 
             type="text"
-            className=" ml-28 lg:ml-52 border-x-0 border-y-0 border-b-2 border-t-0 focus:ring-0 outline-none "
+            className="lg:px-12 border-x-0 border-y-0 border-b-2 border-t-0 focus:ring-0 outline-none "
             placeholder="Leave your thought.."
             onChange={e =>{
                 setComment(e.target.value);
@@ -40,7 +40,7 @@ export default function PictureCard(props){
             <button
             type="button"
             className ={`${comment.length >0 ? "submitCommentActive" : "submitCommentInactive"} 
-           px-3 py-1 text-white bg-slate-400 rounded-lg shadow-lg transform hover:scale-105 
+           px-3 py-1 ml-3 lg:px-5 text-white bg-slate-400 rounded-lg shadow-lg transform hover:scale-105 
             `}
             onClick ={post}
             disabled={isValid ? false : true}
@@ -48,7 +48,7 @@ export default function PictureCard(props){
             >
                 Submit
             </button>
-            <div className = "ml-28 lg:ml-52">
+            
             {feedComments.map((commentArr, i)=>{
                 return(
                     <CommentList
@@ -59,7 +59,7 @@ export default function PictureCard(props){
                     />
                 )
                 })}    
-                </div>  
+                 </div> 
           </div>
          </div>
         </>
