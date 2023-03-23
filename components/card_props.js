@@ -38,11 +38,12 @@ export default function CardProps(props){
             </h1>
 
             <span className=" mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-t-2 mb-2 border-gray-700">
-                <div className ="flex items-center flex-wrap gap-2 ">
-                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden">sports</span>
-                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden">sports</span>
-                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden" >sports</span>
-                    <span className ="border-2 border-black shadow-md text-gray-600 font-semibold rounded-sm overflow-hidden">sports</span>
+                <div className ="flex items-center flex-wrap gap-5 pt-3">
+
+                    <span className =" ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">sports</span>
+                    <span className = "ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">sports</span>
+                    <span className =" ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden" >sports</span>
+                    <span className =" ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">sports</span>
 
 
                 </div>
