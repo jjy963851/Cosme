@@ -44,7 +44,7 @@ export default function Routine({projects}){
     );
 }
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
     const res = await fetch(`http://35.209.3.225:5000/routine`);
     const  projects= await res.json();
   

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import CommentList from "@/components/comment";
 
 
 export default function PictureCard(props){
@@ -66,13 +66,3 @@ export default function PictureCard(props){
     );
 }
 
-export function CommentList(props){
-    return(
-            <>
-            <p className=""> {props.userName}</p>
-            <div className ="">
-            {props.userComment}
-            </div>
-            </>
-    );
-}
