@@ -8,7 +8,7 @@ export default function GPT(){
 
 
 <div className="h-full border-b-2 border-gray-200 border-opacity-60 mx-3 py-2 rounded-lg overflow-hidden">
-<h1 className = "font-extrabold text-lg lg:text-2xl ">Routine Drops</h1>
+<h1 className = "pb-3 font-extrabold text-lg lg:text-2xl ">Routine Drops</h1>
 <div className=" mx-10 grid md:flex">
 <Link href = "/routine" legacyBehavior>
 <img src="/img1.jpg" alt="Card image" className="w-2/3 md:h-1/2 md:w-1/3 lg:w-1/6 pb-2 rounded-xl ml-2 transition duration-300 transform hover:scale-105"/>
@@ -16,7 +16,7 @@ export default function GPT(){
 <div className="flex flex-col w-auto md:w-1/2 md:p-4 lg:w-5/6 ">
 <h2 className="text-xl md:text-2xl font-bold mb-2">Spongebob Square Pants Routine</h2>
 <p className="flex-grow  text-gray-700 text-start line-clamp-2 md:line-clamp-none">Starter cleaner, works well after washting your face in cold water. This is primarily a form based cleansor that deeply penetarate the start</p>
-<div className ="flex items-center space-x-10">
+<div className ="flex items-center space-x-10 pb-3">
 <p>Price</p>
 <p>Steps</p>
 <p>Type</p>
@@ -27,7 +27,7 @@ export default function GPT(){
 
 
 <div className="h-full border-b-2 border-gray-200 border-opacity-60 mx-3 py-5 rounded-lg overflow-hidden">
-<h1 className = "font-extrabold text-lg lg:text-2xl ">KEEP IT, DITCH IT</h1>
+<h1 className = "pb-3 font-extrabold text-lg lg:text-2xl ">KEEP IT, DITCH IT</h1>
 <div className="mx-10 grid md:flex">
     <div className = "flex justify-between gap-x-3 pl-1 md:pr-5 "> 
     <Link href = "/keepit" legacyBehavior>   
@@ -48,7 +48,7 @@ export default function GPT(){
 
 
 <div className="h-full border-b-2 border-gray-200 border-opacity-60 mx-3 py-5 rounded-lg overflow-hidden">
-<h1 className = "font-extrabold text-lg lg:text-2xl ">Local Shop</h1>
+<h1 className = "pb-3 font-extrabold text-lg lg:text-2xl ">Local Shop</h1>
 <div className="mx-10 flex flex-col">
 <Link href = "/shop" legacyBehavior>
 <img src="/img1.jpg" alt="Card image" className="ml-2 md:hidden w-2/3  lg:w-1/4 pb-2 rounded-xl transition duration-300 transform hover:scale-105"/>
@@ -60,7 +60,7 @@ export default function GPT(){
 </div>
 <div className="flex flex-col  md:w-1/2 md:p-4 lg:w-1/3 ">
 <h2 className="text-xl md:text-2xl font-bold mb-2">Spongebob Square Pants Routine</h2>
-<p className="flex-grow md:line-clamp-2 lg:line-clamp-none lg:py-2 text-gray-700">Starter cleaner, works well after washting your face in cold water. This is primarily a form based cleansor that deeply penetarate the start</p>
+<p className="pb-2 flex-grow md:line-clamp-2 lg:line-clamp-none lg:py-2 text-gray-700">Starter cleaner, works well after washting your face in cold water. This is primarily a form based cleansor that deeply penetarate the start</p>
 </div>
 <Link href = "/shop" legacyBehavior>
 <img src="/img1.jpg" alt="Card image" className="hidden md:block mt-3 w-1/3 h-1/3 lg:w-1/5 lg:mt-5 xl:w-1/6 xl:mx-16 pb-2 rounded-xl mr-4 transition duration-300 transform hover:scale-105"/>
