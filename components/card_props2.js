@@ -74,11 +74,11 @@ export default function CardProps2(props){
             </span>
 
            
-            <h3 className ="text-2xl font-semibold my-16">
+            <h3 className ="text-2xl font-semibold my-5">
             Skin Concern
             </h3>
             <span className=" mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1  mb-2 border-gray-700">
-                <div className ="flex items-center flex-wrap gap-5 ">
+                <div className ="flex items-center flex-wrap gap-5 my-5 ">
                     <span className =" ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">Sun</span>
                     <span className ="ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">Sun Spots</span>
                     <span className ="ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden" >Acne</span>
