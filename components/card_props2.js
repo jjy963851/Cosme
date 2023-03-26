@@ -74,7 +74,7 @@ export default function CardProps2(props){
             </span>
 
            
-            <h3 className ="text-2xl font-semibold pb-5">
+            <h3 className ="text-2xl font-semibold my-16">
             Skin Concern
             </h3>
             <span className=" mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1  mb-2 border-gray-700">
