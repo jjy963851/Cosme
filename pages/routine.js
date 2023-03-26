@@ -20,7 +20,7 @@ export default function Routine({projects}){
       autoHeight
       
       threshold = {"30"}
-      speed={1300}
+      speed={2000}
       keyboard={{
         enabled: true,
       }}
