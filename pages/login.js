@@ -13,7 +13,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 export default function Login(){
     const router = useRouter();
     const data = router.query; //edit routine data
-    const[isReadMoreShown, setReadMoreShown] = useState(true)
+    const[isReadMoreShown, setReadMoreShown] = useState(true);
 
     async function handleGoogleSignIn(){
         signIn('google',{callbackUrl:"http://localhost:3000"})

@@ -6,6 +6,8 @@ import React,{ useState} from "react";
 import {useForm} from "react-hook-form";
 import { useRouter } from "next/router";
 import Concern from "@/components/concern";
+
+
 export default function Submit(){
     const [isSubmitted, setSubmitted] =useState(false);
     const {register, handleSubmit} =useForm();
