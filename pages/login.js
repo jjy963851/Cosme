@@ -39,7 +39,7 @@ export default function Login(){
     const JSONdata = JSON.stringify(finalformdata);
     console.log(finalformdata);
     // API endpoint where we send form data.
-    const endpoint = `https://35.209.3.225:5000/login`;
+    const endpoint = `http://35.209.3.225:5000/login`;
     const options = {
       method: "POST",
       headers: {
