@@ -10,9 +10,7 @@ import ROUTINE_API from '@/config';
 export default function Routine({data}){
     return(
         <>
-        <Head>
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-        </Head>
+        
         <Layout>
            <Swiper
       className = "max-h-screen min-h-screen w-screen md:max-w-lg lg:max-w-4xl mx-auto"     
