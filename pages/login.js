@@ -84,8 +84,8 @@ export default function Login(){
             </div>
               
             <button onClick={() => setReadMoreShown(!isReadMoreShown)} 
-             className={` ${isReadMoreShown ? "mb-20 lg:mb-40 " : "hidden"}block text-sm lg:text-xl w-auto border-x-0 border-y-0 border-b-2 border-t-0 focus:ring-0 outline-none `}>
-                {isReadMoreShown ? "sign in" : "go back"}
+             className={` ${isReadMoreShown ? "mb-20 lg:mb-40 " : "hidden"} text-sm lg:text-xl w-auto border-x-0 border-y-0 border-b-2 border-t-0 focus:ring-0 outline-none `}>
+                {isReadMoreShown ? "sign in" : ""}
               </button>
               <div className={` ${isReadMoreShown ? "hidden" : ""} flex flex-col p-3 `}>
               <form
@@ -135,8 +135,10 @@ export default function Login(){
               <input
                 className="px-14 py-2 text-white bg-purple-600 rounded-lg shadow-lg"
                 type="submit"
-                placeholder="Save"
+                placeholder="Log In"
               />
+               
+              
             </div>
           </form>
           {/**<button className="mt-5" onClick={handleGoogleSignIn}>Sigin with Google</button> */}
