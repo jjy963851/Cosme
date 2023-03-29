@@ -44,7 +44,7 @@ export default function Login(){
       method: "POST",
       headers: {
         Accept: "application/json",
-        "Content-type": "application/json;",
+        "Content-type": "application/json;  charset=UTF-8",
       },
       body: JSONdata,
     };
@@ -77,8 +77,7 @@ export default function Login(){
     return(
 
         <>
-       
-          
+        
         <div className ="flex flex-col p-3 mx-auto lg:max-w-5xl">
             <div className = "mx-auto flex flex-col text-2xl lg:text-6xl text-purple-600 font-bold mt-32 mb-20">
                 Just a Nanba
