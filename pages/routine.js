@@ -5,12 +5,14 @@ import {Keyboard, Pagination, Navigation} from "swiper";
 import CardProps2 from '@/components/card_props2'
 import Layout from '@/components/layout';
 import 'swiper/css';
-import TextCard from './textcard';
-import CardProps from '@/components/card_props';
+import ROUTINE_API from '@/config';
 
 export default function Routine({data}){
     return(
         <>
+        <Head>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        </Head>
         <Layout>
            <Swiper
       className = "max-h-screen min-h-screen w-screen md:max-w-lg lg:max-w-4xl mx-auto"     
@@ -44,9 +46,9 @@ export default function Routine({data}){
     );
 }
 
-export async function getServerSideProps(){
-    const res = await fetch(`http://35.209.3.225:5000/routine`);
-    const  data= await res.json();
+export async function getStaticProps(){
+    const res = await fetch('http://35.209.3.225:5000/routine');
+    const data= await res.json();
   
     return{
       props: {data},
