@@ -26,14 +26,14 @@ export default function Login(){
       } = useForm(); //handling our form submission
       const [isSubmitted, setSubmitted] = useState(false); //check if form was submitted
     
-      async function handleFormSubmit(projects) {
+      async function handleFormSubmit(data) {
         setSubmitted(true);
         //TODO: Show a loading dialog
-        console.log(projects);
+        console.log(data);
         // Get data from the form.
         const finalformdata = {
-          email: projects.email,
-          password: projects.password,
+          email: data.email,
+          password: data.password,
         };
          // Send the data to the server in JSON format.
     const JSONdata = JSON.stringify(finalformdata);
