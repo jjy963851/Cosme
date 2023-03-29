@@ -15,9 +15,9 @@ export default function Login(){
     const data = router.query; //edit routine data
     const[isReadMoreShown, setReadMoreShown] = useState(true);
 
-    async function handleGoogleSignIn(){
+    {/*async function handleGoogleSignIn(){
         signIn('google',{callbackUrl:"http://localhost:3000"})
-       }
+       }*/}
 
        const {
         register,
@@ -77,9 +77,7 @@ export default function Login(){
     return(
 
         <>
-          <Head>
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-        </Head>
+          
         <div className ="flex flex-col p-3 mx-auto lg:max-w-5xl">
             <div className = "mx-auto flex flex-col text-2xl lg:text-6xl text-purple-600 font-bold mt-32 mb-20">
                 Just a Nanba
@@ -141,7 +139,8 @@ export default function Login(){
               />
             </div>
           </form>
-          <button className="mt-5" onClick={handleGoogleSignIn}>Sigin with Google</button>
+          {/**<button className="mt-5" onClick={handleGoogleSignIn}>Sigin with Google</button> */}
+          
 
 
 
