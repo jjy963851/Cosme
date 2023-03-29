@@ -77,7 +77,9 @@ export default function Login(){
     return(
 
         <>
-        
+          <Head>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        </Head>
         <div className ="flex flex-col p-3 mx-auto lg:max-w-5xl">
             <div className = "mx-auto flex flex-col text-2xl lg:text-6xl text-purple-600 font-bold mt-32 mb-20">
                 Just a Nanba
