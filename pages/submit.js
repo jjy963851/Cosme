@@ -66,7 +66,7 @@ export default function Submit(){
   
         if (result.message == "success") {
           setSubmitted(false);
-          router.push("/step");
+          router.push("/chatgpt");
         } else {
           setSubmitted(false);
           alert(result.message);
@@ -88,7 +88,7 @@ export default function Submit(){
         
         <div className ="min-w-min">
             <div className = "pl-5 mt-3">
-            <Link href="/">
+            <Link href="/chatgpt">
             <ArrowBackIcon/>
             </Link>
             </div>
