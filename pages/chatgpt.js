@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Layout from '@/components/layout';
 export default function GPT(){
     
     return(
 <>
 
-
+<Layout>
 <div className="h-full border-b-2 border-gray-200 border-opacity-60 mx-3 py-2 rounded-lg overflow-hidden">
 <h1 className = "pb-3 font-extrabold text-lg lg:text-2xl ">Routine Drops</h1>
 <div className=" mx-10 grid md:flex">
@@ -70,7 +71,7 @@ export default function GPT(){
 
 </div>
 </div>
-
+</Layout>
 </>
     );
 }

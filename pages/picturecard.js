@@ -28,7 +28,7 @@ export default function PictureCard(props){
             <input 
             type="text"
             className="lg:px-12 border-x-0 border-y-0 border-b-2 border-t-0 focus:ring-0 outline-none "
-            placeholder="Leave your thought.."
+            placeholder=""
             onChange={e =>{
                 setComment(e.target.value);
             }}

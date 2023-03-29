@@ -2,15 +2,13 @@
 import Head from 'next/head'
 import Layout from '@/components/layout';
 import 'swiper/css';
-import Mainpage, { MainPage1, MainPage3 } from './mainpage';
 import GPT from './chatgpt';
-import TextCard from './textcard';
-
+import Login from './login';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export default function Home({projects}) {
  
  
-  
   return (
     <>
       <Head>
@@ -19,19 +17,20 @@ export default function Home({projects}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
+      {/*<Layout>*/}
+        
        <div className="container mx-auto py-5 px-4">
       <div className="flex flex-wrap">
+     
       
-      
-       <GPT/>
+       <Login/>
      
       </div>
       </div>
       
      
        
-      </Layout>
+      {/*</Layout>*/}
     </>
   )
 }

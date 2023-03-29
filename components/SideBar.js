@@ -99,7 +99,7 @@ export default function Sidebar(){
               <PostIcon className = "mr-3"/>
              Submit Your Story
             </Link>
-            <Link href =""
+            <Link href ="/signIn"
             className ="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6">
               <ProfileIcon className = "mr-3"/>
               Collaborate With Us
