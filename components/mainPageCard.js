@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/legacy/image";
+
 import { useState } from "react";
 export default function MainPageCard(props){
     const[isReadMoreShown, setReadMoreShown] = useState(true)
@@ -7,8 +7,9 @@ return(
 <div className =" w-full h-full lg:w-2/3 mx-auto  border-b-2 border-gray-200 border-opacity-60  py-5 rounded-lg overflow-hidden">
 <div className ="grid lg:flex lg:gap-x-3">
 <div className="flex-col lg:w-1/2">
+    <Link href="/routine">
     <img src="/img1.jpg" alt="card" className="w-full h-full object-cover rounded-lg"/>
-    
+    </Link>
 </div>
     <div className="mx-auto lg:w-1/2 p-2 lg:p-6">
        <h2 className="text-xl font-bold lg:mb-4">@madbunny</h2>

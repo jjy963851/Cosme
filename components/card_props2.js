@@ -14,7 +14,7 @@ export default function CardProps2(props){
         <div className = "">
 
             {/** this is image control! height full, border-2 테두리 opacity=투명도 */}
-            <div className = " mt-10 border-b-2 border-gray-200  border-opacity-60 rounded-lg overflow-y-hidden">
+            <div className = "mt-10 xl:mt-0 lg:border-b-2 border-gray-200  border-opacity-60 rounded-lg overflow-y-hidden">
                 {/**this will be the product title */}
                 
                 <h3 className = " text-4xl font-semibold my-6">
@@ -77,7 +77,7 @@ export default function CardProps2(props){
             <h3 className ="text-2xl font-semibold my-5">
             Skin Concern
             </h3>
-            <span className=" mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1  mb-2 border-gray-700">
+            <span className=" mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1  border-gray-700">
                 <div className ="flex items-center flex-wrap gap-5 my-5 ">
                     <span className =" ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">Sun</span>
                     <span className ="ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">Sun Spots</span>

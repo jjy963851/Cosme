@@ -1,7 +1,12 @@
 import React, {useState} from 'react';
-import Link from 'next/link';
 
-
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import Link from "next/link";
+import { Menu } from "@mui/icons-material";
+import HomeIcon from "@mui/icons-material/Home";
+import SearchIcon from "@mui/icons-material/Search";
+import AddToQueueIcon from "@mui/icons-material/AddToQueue";
+import PersonIcon from "@mui/icons-material/Person";
 import {
     AdjustIcon,
     ArchiveBoxIcon,
@@ -14,8 +19,8 @@ import {
 
 
 
-export default function Sidebar(){
-    const bgColor = "bg-gray-500";
+export default function Sidebar(props){
+    
     const [menuToggle, setMenuToggle] =useState(true);
     const [profileToggle, setProfileToggle] = useState(false);
 
@@ -23,7 +28,7 @@ export default function Sidebar(){
       //Upper menu control
       
         <div>
-          <div>
+          <div className ="hidden md:block">
             <nav className = "bg-white">
               {/**when screen become large, x margin is auto filled sm: means when screen become small lg: also same px is padding to x*/}
               <div className = "max-w-auto mx-auto px-2 sm:px-6 lg:px-8">
@@ -31,13 +36,14 @@ export default function Sidebar(){
                 <div className ="flex items-center justify-between h-16">
                   {/** 상단 메뉴 */}
                   {/** flex container, 작은화면일때 버튼늘어남 작은화면일때 왼쪽으로 붙음 */}
-                    <div className = "flex items-center justify-center sm:items-stretch sm:justify-start"> 
-                    <button className = "px-4 py-2 text-grey-400 rounded-lg text-2xl hover:bg-white"
-                    onClick={() => setMenuToggle(!menuToggle)}>
-                        <HamburgerIcon/>
-                    </button>
                     
-                  </div>
+                    <div className = "pl-5">
+                    <Link href="/mainpage">
+                    <ArrowBackIcon/>
+                    </Link>
+                    </div>
+                    
+                  
                   {/*right side menu*/}
                    <div>
                       <div>
@@ -76,38 +82,6 @@ export default function Sidebar(){
               </div>
             </nav>
           </div>
-        {/* Mobile Header & Nav */}
-        <div>
-          <header className ={`w-full py-5 px-6 ${
-              menuToggle ? "hidden" : "block"
-            } `}>
-          
-          {/** here is mobile drop down menu */}
-          <nav className = "text-white text-base font-semibold bg-gray-500">
-            <Link href ="/"
-            className ="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6">
-              <AdjustIcon className = "mr-3"/>
-              Home
-            </Link>
-            <Link href =""
-            className ="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6">
-              <ArchiveBoxIcon className = "mr-3"/>
-              About Us
-            </Link>
-            <Link href ="/submit"
-            className ="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6">
-              <PostIcon className = "mr-3"/>
-             Submit Your Story
-            </Link>
-            <Link href ="/signIn"
-            className ="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6">
-              <ProfileIcon className = "mr-3"/>
-              Collaborate With Us
-            </Link>
-          </nav>
-          </header>
-        </div>
-      
     </div>
     );
 }
