@@ -26,7 +26,7 @@ export default function MainPage(){
         </div>
 
         <h2 className ="font-semibold text-lg mx-auto pt-10">IYKYK</h2>
-        <div className ="pt-5"><MainPageProduct/></div>
+        <div className ="lg:pt-5"><MainPageProduct/></div>
 
 
         <h2 className ="font-semibold text-lg mx-auto pt-10">Glossier, Williamsburg</h2>
