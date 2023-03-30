@@ -56,7 +56,8 @@ export default function Login(){
           console.log(result);
           setSubmitted(false);
           alert("Loggedin successfully");
-          router.push("/chatgpt");
+          router.push("/mainpage");
+          
           // handle session
         } else {
           setSubmitted(false);
@@ -136,6 +137,7 @@ export default function Login(){
                 className="px-14 py-2 text-white bg-purple-600 rounded-lg shadow-lg"
                 type="submit"
                 placeholder="Log In"
+                value={"Log In"}
               />
                
               

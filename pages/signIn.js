@@ -82,7 +82,7 @@ export default function Signin(){
             onSubmit={handleSubmit(handleFormSubmit)}
             method="POST"
           >
-            <div className="flex flex-col">
+            <div className="flex flex-col py-3">
               <label name="Email" className="font-semibold text-sm md:text-xl">
                 Email
               </label>
@@ -106,7 +106,7 @@ export default function Signin(){
               <p>{errors.email?.message}</p>
             </div>
 
-            <div className="flex flex-col mt-3">
+            <div className="flex flex-col py-3 ">
               <label name="name" className="font-semibold text-sm md:text-xl">
                 Password
               </label>
@@ -117,11 +117,11 @@ export default function Signin(){
                 type="password"
                 placeholder="Password must contain special characters"
                 {...register("password", { required: true, maxLength: 80 })}
-                className="pl-0 border-x-0 border-y-0 text-sm border-b-2 border-t-0 focus:ring-0 outline-none"
+                className="pl-0 border-x-0 border-y-0  border-b-2 border-t-0 focus:ring-0 outline-none"
               />
             </div>
 
-            <div className="flex flex-col mt-3">
+            <div className="flex flex-col py-3">
               <label name="name" className="font-semibold text-sm md:text-xl">
                 Re-enter your Password
               </label>
@@ -135,11 +135,12 @@ export default function Signin(){
               />
             </div>
 
-            <div className="flex mt-5 justify-center items-center">
+            <div className="flex mt-3 justify-center items-center">
               <input
                 className="px-14 py-2 text-white bg-purple-600 rounded-lg shadow-lg"
                 type="submit"
                 placeholder="Save"
+                value ={"Create New Account"}
               />
             </div>
           </form>

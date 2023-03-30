@@ -5,6 +5,7 @@ import 'swiper/css';
 import GPT from './chatgpt';
 import Login from './login';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MainPage from './mainpage';
 
 export default function Home({projects}) {
  
@@ -23,7 +24,8 @@ export default function Home({projects}) {
       <div className="flex flex-wrap">
      
       
-       <Login/>
+       {/*<Login/>*/}
+       <MainPage/>
      
       </div>
       </div>
