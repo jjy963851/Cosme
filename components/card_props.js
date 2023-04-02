@@ -9,36 +9,39 @@ export default function CardProps(props){
     return(
          /**padding 4, small size screen, card size will be half of the screen */
         /** this container will make overall card will responsive  */
-        <div className = "">
+        <div className = " w-full h-full lg:w-2/3 mx-auto  overflow-hidden">
 
             {/** this is image control! height full, border-2 테두리 opacity=투명도 */}
-            <div className = "mt-10 lg:mt-0 lg:border-b-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <div className = "grid">
                 {/**this will be the product title */}
-                
-                <h3 className = " text-2xl font-semibold mb-6">
+                <div className="flex-col w-full ">
+                <h3 className = " text-2xl font-semibold mb-3">
                 {props.productTitle}
                 </h3>
                 
             {/** object-cover means when the screen size changes, image size also change together */}
             <img
-            className="w-1/2 mx-auto
+            className="w-full h-5/6 object-cover rounded-lg
                        "
-            src="https://www.byrdie.com/thmb/gDvPcIIdqlCU_8f3Wz6VUM_uM_A=/800x800/filters:no_upscale():max_bytes(150000):strip_icc()/curologyacnebodywash-240373da3c26495a8957bba626b538a9.jpg"
+            src="https://www.byrdie.com/thmb/gDvPcIIdqlCU_8f3Wz6VUM_uM_A=/800x800/filters:no_upscale():max_bytes(150000):strip_icc()/curologyacnebodywash-240373da3c26495a8957bba626b538a9.jpg"          
             alt="card image"
             />
-            {/**transition duration = when hover it, the hover effect time? */}
-            <div className =" p-6 ">
+            {/** */}
             
-            <h2 className = "text-2xl font-semibold mb-2">
+            </div>
+            {/**transition duration = when hover it, the hover effect time? */}
+            <div className ="-mt-10 lg:w-full p-2 lg:p-6 ">
+            
+            <h2 className = "text-2xl font-semibold pb-1">
              {props.ProductName}
             </h2>
 
-            <h1 className ="text-xl font-semibold mb-5">
+            <h1 className ={`${isReadMoreShown ? "" : "hidden"} block text-xl font-semibold pb-2`}>
            {props.BrandName}
             </h1>
 
-            <span className=" mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-t-2 mb-2 border-gray-700">
-                <div className ="flex items-center flex-wrap gap-5 pt-3">
+            <span className={`${isReadMoreShown ? "" : "hidden"} block mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-t-2 mb-2 border-gray-700`}>
+                <div className ="flex items-center flex-wrap gap-5 mt-2">
 
                     <span className =" ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">sports</span>
                     <span className = "ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">sports</span>
@@ -49,14 +52,14 @@ export default function CardProps(props){
                 </div>
                 </span>
 
-            <p className ={`${isReadMoreShown ? "" : "line-clamp-none"} line-clamp-4 md:line-clamp-none leading-relaxed mb-3`}>
+            <p className ={`${isReadMoreShown ? "hidden" : ""} block leading-relaxed mb-3`}>
             {props.ProductDetail}
             </p>
             {/**link and etc */}
                 <div className ="flex items-center flex-wrap">
                 <button className =" text-gray-500 inline-flex items-center md:mb-2 lg:mb-0 hover:text-pink-200 trainsition duration-300 ease-in"
                 onClick={()=>setReadMoreShown(!isReadMoreShown)}>
-                 {isReadMoreShown ? "A Bit more about the step" : "back to Card"}
+                 {isReadMoreShown ? "Read About Steps" : "back to Card"}
                 <ArrowRightIcon className ="w-4 h-4 ml-2"/>
                 </button>
                 
