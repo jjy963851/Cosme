@@ -24,9 +24,9 @@ export default function Home({projects}) {
       <div className="flex flex-wrap">
      
       
-       {/*<Login/>*/}
-       <MainPage/>
-     
+       {/*<MainPage/>*/}
+       
+       <Login/>
       </div>
       </div>
       
