@@ -8,7 +8,7 @@ import PictureCard from "./picturecard";
 import TextCard from "./textcard";
 
 
-export default function Features(props){
+export default function Features(props,{pic}){
     const post = props.post
     
     return(
@@ -45,9 +45,14 @@ export default function Features(props){
               <CardProps key={post?.id} productTitle ={post?.step_type} ProductImage = {post} ProductName ={post?.product_name} BrandName = {post?.brand_name} ProductDetail = {post?.description}/>
               </SwiperSlide>
           ))} 
-            <SwiperSlide>
+          <SwiperSlide>
               <PictureCard/>
-            </SwiperSlide>
+              </SwiperSlide>
+           
+            {/** {pic?.data.map((post, index)=>(
+              
+            ))} */}
+            
               <SwiperSlide>
                 <TextCard/>
               </SwiperSlide>

@@ -23,10 +23,11 @@ export default function CardProps(props){
             <img
             className="w-full h-5/6 object-cover rounded-lg
                        "
-            src="https://www.byrdie.com/thmb/gDvPcIIdqlCU_8f3Wz6VUM_uM_A=/800x800/filters:no_upscale():max_bytes(150000):strip_icc()/curologyacnebodywash-240373da3c26495a8957bba626b538a9.jpg"          
+            
+            src={props.ProductImage}         
             alt="card image"
             />
-            {/** */}
+            {/**"https://www.byrdie.com/thmb/gDvPcIIdqlCU_8f3Wz6VUM_uM_A=/800x800/filters:no_upscale():max_bytes(150000):strip_icc()/curologyacnebodywash-240373da3c26495a8957bba626b538a9.jpg"  */}
             
             </div>
             {/**transition duration = when hover it, the hover effect time? */}

@@ -6,7 +6,11 @@ import GPT from './chatgpt';
 import Login from './login';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage from './mainpage';
-
+import IntroPage from './introPage';
+import QuestionPage from './questionPage';
+import {Swiper, SwiperSlide} from "swiper/react";
+import SwiperCore, { Navigation, Pagination, Keyboard } from "swiper";
+import 'swiper/css';
 export default function Home({projects}) {
  
  
@@ -20,13 +24,36 @@ export default function Home({projects}) {
       </Head>
       {/*<Layout>*/}
         
-       <div className="container mx-auto py-5 ">
+       <div className="container mx-auto py-20 ">
       <div className="flex flex-wrap">
-     
+
+      <Swiper
+      rewind ={true}
+      slidesPerView={"auto"}
+      autoHeight
+      keyboard={{
+        enabled: true,
+      }}
+      speed ={500}
+
+      modules={[Keyboard]}
       
-       {/*<Login/>*/}
+    >
+
+      
+       {/*<Login/>
        <MainPage/>
-       
+       */}
+       <SwiperSlide>
+       <IntroPage/>
+       </SwiperSlide>
+
+       <SwiperSlide>
+       <QuestionPage/>
+       </SwiperSlide>
+
+      
+       </Swiper>
       </div>
       </div>
       

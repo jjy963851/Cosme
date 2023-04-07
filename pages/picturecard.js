@@ -1,12 +1,39 @@
 import { useState } from "react";
 import CommentList from "@/components/comment";
+import { useRouter } from "next/router";
 
-
-export default function PictureCard(props){
+export default function PictureCard({result}){
     const [userName] = useState("");
     const [comment, setComment] = useState("");
     const [ feedComments, setFeedComments] = useState([]);
     const [isValid, setIsValid] = useState(false);
+    const router = useRouter();
+    const data = router.query;
+    
+    async function handlePicture(data){
+        const profileData ={
+            image : data.routine_image_url,
+
+        }
+        
+      
+      const endpoint = `http://35.209.3.225:5000/image/routine`;
+      const options = {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-type": "application/json; charset=UTF-8",
+        },
+        body: JSONdata,
+      };
+
+      const response = await fetch(endpoint, options);
+      const result = await response.json();
+
+      return{
+        props: {result},
+      }
+    }
 
     const post = e =>{
         const copyFeedComments = [...feedComments];
@@ -20,7 +47,7 @@ export default function PictureCard(props){
          <div className = "flex items-center flex-col">
          <img
             className="w-1/2 mx-auto lg:w-1/2 pb-2 rounded-xl"
-            src="/img1.jpg"
+            
             alt="card image"
             
             />
