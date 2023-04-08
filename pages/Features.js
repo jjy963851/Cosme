@@ -8,8 +8,21 @@ import PictureCard from "./picturecard";
 import TextCard from "./textcard";
 
 
-export default function Features(props,{pic}){
-    const post = props.post
+const imgList = [
+  {
+    url : "https://storage.googleapis.com/basic_prod_image/step/step-818a8f3e-f66e-4170-93e4-953490134694.jpg",
+  },
+  {
+    url : "https://storage.googleapis.com/basic_prod_image/step/step-.jpg",
+  },
+  
+]
+
+
+export default function Features(props){
+    
+    const post = props.post;
+   
     
     return(
 <div>
@@ -42,17 +55,20 @@ export default function Features(props,{pic}){
         
             {post?.steps.map((post)=>(
               <SwiperSlide key = {post?.id}>
-              <CardProps key={post?.id} productTitle ={post?.step_type} ProductImage = {post} ProductName ={post?.product_name} BrandName = {post?.brand_name} ProductDetail = {post?.description}/>
+                 
+              <CardProps key={post?.id} productTitle ={post?.step_type} ProductName ={post?.product_name} BrandName = {post?.brand_name} ProductDetail = {post?.description}
+              productImage = {post?.image_id?.image?.routine_image_url}
+              />
+              
               </SwiperSlide>
           ))} 
+         {/**{imgList.map((imgList)=>(
+          * ))}
+          */}
           <SwiperSlide>
               <PictureCard/>
               </SwiperSlide>
            
-            {/** {pic?.data.map((post, index)=>(
-              
-            ))} */}
-            
               <SwiperSlide>
                 <TextCard/>
               </SwiperSlide>
@@ -62,6 +78,5 @@ export default function Features(props,{pic}){
 
     );
 }
-
 
 
