@@ -34,7 +34,7 @@ export default function Features(props){
       <div className ="pl-1">
         
       <Swiper
-      className = "max-h-screen min-h-screen"
+      className = "h-full "
       rewind ={true}
       slidesPerView={"auto"}
       autoHeight

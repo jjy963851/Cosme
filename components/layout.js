@@ -15,7 +15,7 @@ export default function Layout({children}){
         <Sidebar/>
         <MainNav/>
         {children}
-        <MobileNav/>    
+           
             
         </div>
         

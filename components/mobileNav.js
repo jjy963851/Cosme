@@ -11,7 +11,7 @@ import PersonIcon from "@mui/icons-material/Person";
 
 export default function MobileNav(){
     return(
-      <div className="-my-14">
+      
         <div className=" p-5 sticky top-0 bg-white border-t-2 shadow-lg z-auto border-b-slate-200 lg:hidden">
       <div className="flex justify-between px-3">
         <Link href="/">
@@ -31,7 +31,7 @@ export default function MobileNav(){
         </Link>
       </div>
     </div>
-    </div>
+    
 
     );
 

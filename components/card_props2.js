@@ -4,6 +4,7 @@ import { useState } from "react";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import MobileNav from "./mobileNav";
 
 export default function CardProps2(props){
    
@@ -78,16 +79,17 @@ export default function CardProps2(props){
             Skin Concern
             </h3>
             <span className=" mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1  border-gray-700">
-                <div className ="flex items-center flex-wrap gap-5 -py-5 ">
+                <div className ="flex items-center flex-wrap gap-5 ">
                     <span className =" ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">Sun</span>
                     <span className ="ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">Sun Spots</span>
                     <span className ="ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden" >Acne</span>
                     <span className ="ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">Atopic Dermatits</span>
                 </div>
                 </span>
-            
+               
             </div> 
             </div>
+            <MobileNav/>
         </div>
 
 
