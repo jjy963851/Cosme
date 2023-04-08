@@ -27,7 +27,7 @@ export default function CardProps(props){
                 
             {/** object-cover means when the screen size changes, image size also change together */}
             <img
-            className="w-full h-5/6 object-cover rounded-lg
+            className="w-full h-5/6 object-cover rounded-lg 
                        "
             src="https://storage.googleapis.com/basic_prod_image/step/step-818a8f3e-f66e-4170-93e4-953490134694.jpg"
             
@@ -40,7 +40,7 @@ export default function CardProps(props){
             
             </div>
             {/**transition duration = when hover it, the hover effect time? */}
-            <div className ="-mt-10 lg:w-full p-2 lg:p-6 ">
+            <div className ="-mt-7 lg:w-full p-2 lg:p-6 ">
             
             <h2 className = "text-2xl font-semibold pb-1">
              {props.ProductName}

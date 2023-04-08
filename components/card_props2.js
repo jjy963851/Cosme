@@ -78,7 +78,7 @@ export default function CardProps2(props){
             Skin Concern
             </h3>
             <span className=" mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1  border-gray-700">
-                <div className ="flex items-center flex-wrap gap-5 pb-1 ">
+                <div className ="flex items-center flex-wrap gap-5 -mb-10 ">
                     <span className =" ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">Sun</span>
                     <span className ="ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">Sun Spots</span>
                     <span className ="ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden" >Acne</span>
