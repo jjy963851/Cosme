@@ -29,12 +29,12 @@ export default function CardProps(props){
             <img
             className="w-full lg:w-3/4 h-5/6 mx-auto object-cover rounded-lg 
                        "
-            src="https://storage.googleapis.com/basic_prod_image/step/step-818a8f3e-f66e-4170-93e4-953490134694.jpg"
+            src={props.productImage}
             
                  
             alt="card image"
             />
-            {/**/}  
+            {/*"https://storage.googleapis.com/basic_prod_image/step/step-818a8f3e-f66e-4170-93e4-953490134694.jpg"*/}  
             {/** "https://storage.googleapis.com/basic_prod_image/step/step-818a8f3e-f66e-4170-93e4-953490134694.jpg"*/}
             {/**"https://www.byrdie.com/thmb/gDvPcIIdqlCU_8f3Wz6VUM_uM_A=/800x800/filters:no_upscale():max_bytes(150000):strip_icc()/curologyacnebodywash-240373da3c26495a8957bba626b538a9.jpg"  */}
             

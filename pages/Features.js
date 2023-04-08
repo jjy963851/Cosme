@@ -57,7 +57,7 @@ export default function Features(props){
               <SwiperSlide key = {post?.id}>
                  
               <CardProps key={post?.id} productTitle ={post?.step_type} ProductName ={post?.product_name} BrandName = {post?.brand_name} ProductDetail = {post?.description}
-              productImage = {post?.image_id?.image?.routine_image_url}
+              productImage = {post?.image_url}
               />
               
               </SwiperSlide>

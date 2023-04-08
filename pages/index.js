@@ -11,6 +11,8 @@ import QuestionPage from './questionPage';
 import {Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Keyboard } from "swiper";
 import 'swiper/css';
+import VerticalPage from './vertical_intro';
+import IntroProps from '@/components/intro_props';
 export default function Home({projects}) {
  
  
@@ -25,7 +27,7 @@ export default function Home({projects}) {
       {/*<Layout>*/}
         
        <div className="container mx-auto py-20 ">
-      <div className="flex flex-wrap">
+      <div className="flex flex-col">
 
       <Swiper
       rewind ={true}
@@ -45,7 +47,7 @@ export default function Home({projects}) {
        <MainPage/>
        */}
        <SwiperSlide>
-       <IntroPage/>
+       <VerticalPage/>
        </SwiperSlide>
 
        <SwiperSlide>
