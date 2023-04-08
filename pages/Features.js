@@ -31,10 +31,10 @@ export default function Features(props){
         <title>Card feature</title>
         
       </Head>
-      <div className ="pl-1">
+      <div className ="h-full w-screen px-4 md:max-w-lg lg:max-w-4xl mx-auto">
         
       <Swiper
-      className = "h-full "
+      className = "max-h-screen min-h-screen"
       rewind ={true}
       slidesPerView={"auto"}
       autoHeight

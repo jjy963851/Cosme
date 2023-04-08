@@ -89,7 +89,7 @@ export default function CardProps2(props){
                
             </div> 
             </div>
-            <MobileNav/>
+            
         </div>
 
 
