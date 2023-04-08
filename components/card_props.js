@@ -27,7 +27,7 @@ export default function CardProps(props){
                 
             {/** object-cover means when the screen size changes, image size also change together */}
             <img
-            className="w-full h-5/6 object-cover rounded-lg 
+            className="w-full lg:w-3/4 h-5/6 mx-auto object-cover rounded-lg 
                        "
             src="https://storage.googleapis.com/basic_prod_image/step/step-818a8f3e-f66e-4170-93e4-953490134694.jpg"
             
@@ -46,11 +46,11 @@ export default function CardProps(props){
              {props.ProductName}
             </h2>
 
-            <h1 className ={`${isReadMoreShown ? "" : "hidden"} block text-xl font-semibold pb-2`}>
+            <h1 className ={`${isReadMoreShown ? "" : "hidden"} lg:block text-xl font-semibold pb-2`}>
            {props.BrandName}
             </h1>
 
-            <span className={`${isReadMoreShown ? "" : "hidden"} block mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-t-2 mb-2 border-gray-700`}>
+            <span className={`${isReadMoreShown ? "" : "hidden"} lg:block mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-t-2 mb-2 border-gray-700`}>
                 <div className ="flex items-center flex-wrap gap-5 mt-2">
 
                     <span className =" ring ring-offset-4 ring-slate-300 text-gray-600 font-semibold rounded-md overflow-hidden">sports</span>
@@ -62,12 +62,12 @@ export default function CardProps(props){
                 </div>
                 </span>
 
-            <p className ={`${isReadMoreShown ? "hidden" : ""} block leading-relaxed mb-3`}>
+            <p className ={`${isReadMoreShown ? "hidden" : ""} lg:block leading-relaxed mb-3`}>
             {props.ProductDetail}
             </p>
             {/**link and etc */}
                 <div className ="flex items-center flex-wrap">
-                <button className =" text-gray-500 inline-flex items-center md:mb-2 lg:mb-0 hover:text-pink-200 trainsition duration-300 ease-in"
+                <button className =" text-gray-500 inline-flex items-center md:mb-2 lg:hidden lg:mb-0 hover:text-pink-200 trainsition duration-300 ease-in"
                 onClick={()=>setReadMoreShown(!isReadMoreShown)}>
                  {isReadMoreShown ? "Read About Steps" : "back to Card"}
                 <ArrowRightIcon className ="w-4 h-4 ml-2"/>

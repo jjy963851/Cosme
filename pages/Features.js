@@ -31,7 +31,7 @@ export default function Features(props){
         <title>Card feature</title>
         
       </Head>
-      <div className ="h-full w-screen px-4 md:max-w-lg lg:max-w-4xl mx-auto">
+      <div className ="  px-4 ">
         
       <Swiper
       className = "max-h-screen min-h-screen"
