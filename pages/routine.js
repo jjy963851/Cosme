@@ -13,7 +13,7 @@ export default function Routine({data}){
         
         <Layout>
            <Swiper
-      className = "max-h-screen min-h-screen w-screen md:max-w-lg lg:max-w-4xl mx-auto"     
+      className = " w-full   lg:w-3/4 mx-auto"     
      slidesPerView={"auto"}
      rewind ={true}
       direction={"vertical"}
