@@ -50,7 +50,7 @@ export default function CardProps2(props){
            <p className ={` ${isReadMoreShown ? "" : "line-clamp-none"} line-clamp-4 md:line-clamp-none leading-relaxed my-3 `}>
                 {props.content}
             </p>
-            <button className ="text-gray-500 hover:text-pink-200 trainsition duration-300 ease-in" 
+            <button className ="lg:hidden text-gray-500 hover:text-pink-200 trainsition duration-300 ease-in" 
             onClick={()=>setReadMoreShown(!isReadMoreShown)}>
                 {isReadMoreShown ? "read more..." : "read less..."}
             </button>
