@@ -13,9 +13,9 @@ export default function FirstintroPage(props){
     return(
         <>
          <Swiper
-      className = "h-auto"     
+      className = "min-h-screen  mx-auto"     
       rewind ={true}
-      slidesPerView={"auto"}
+      slidesPerView={"1"}
      
       autoHeight
       keyboard={{

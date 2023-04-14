@@ -28,11 +28,11 @@ export default function Home({qst}) {
       {/*<Layout>*/}
         
        
-      <div className='pt-3 px-5'>
+      <div className='py-2lg:pt-2 px-5 '>
       <Swiper
-      className='h-1/2 lg:w-3/4 mx-auto '
+      className='min-h-screen    lg:w-3/4 mx-auto '
       rewind ={true}
-      slidesPerView={"auto"}
+      slidesPerView={"1"}
       autoHeight
       direction={"vertical"}
       threshold = {"30"}
@@ -46,29 +46,31 @@ export default function Home({qst}) {
         
 
         {qst.data.map((post, index) => (
+          <>
         <SwiperSlide key={index}>
-        <SwiperSlide>
+          <div className="h-screen flex flex-col justify-center items-center">
         <IntroPage/>
-        </SwiperSlide>
-        <SwiperSlide>
         <QuestionProps shopName ={post?.name} city ="NY, brooklyn" description = {post?.description} recommendation= {post?.id} skinType ={post?.concerns} age ="26" concern1={post?.labels} concern2= {post?.labels}/>
+        </div>
+       </SwiperSlide>
+       <SwiperSlide key={index +1}>
+       <div className="h-screen flex justify-center items-center mt-40">
+        <FirstintroPage key = {index} post = {post} />
+        </div>
         </SwiperSlide>
-        <SwiperSlide>
-           <FirstintroPage key = {index} post = {post} /> 
-           </SwiperSlide>
+       </>
+         ))}
          
-        </SwiperSlide>
-        
-        ))}
-
-
-      
+         
+          
       
        </Swiper>
       {/*
-       {qst.data.map((post, index) => (
-           
-        ))}
+      
+      {qst.data.map((post, index) => (
+          
+           ))} 
+       
       </Layout>*/}
       </div>
     </>

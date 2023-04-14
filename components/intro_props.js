@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function IntroProps(props){
     return(
         <>
-        <div className="w-full h-full lg:w-2/3 mx-auto py-2">
+        <div className="w-full  lg:w-2/3 mx-auto">
         <div className = " mx-auto border-2 bg-amber-100 border-gray-200 border-opacity-60  py-10 rounded-xl shadow-md overflow-hidden">
         <div className = "flex flex-col w-5/6 pl-3">
             <h1 className = " font-bold text-3xl pb-2"> {props.productName}</h1>
