@@ -11,9 +11,10 @@ import QuestionPage from './questionPage';
 import {Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Keyboard } from "swiper";
 import 'swiper/css';
-import VerticalPage from './vertical_intro';
+import QuestionProps from '@/components/question_props';
 import IntroProps from '@/components/intro_props';
-export default function Home({projects}) {
+import FirstintroPage from './firstintroPage';
+export default function Home({qst}) {
  
  
   return (
@@ -26,44 +27,61 @@ export default function Home({projects}) {
       </Head>
       {/*<Layout>*/}
         
-       <div className="container mx-auto py-20 ">
-      <div className="flex flex-col">
-
+       
+      <div className='pt-3 px-5'>
       <Swiper
+      className='h-1/2 lg:w-3/4 mx-auto '
       rewind ={true}
       slidesPerView={"auto"}
       autoHeight
+      direction={"vertical"}
+      threshold = {"30"}
+      speed={500}
       keyboard={{
         enabled: true,
       }}
-      speed ={500}
-
+     
       modules={[Keyboard]}
-      
     >
+        
+
+        {qst.data.map((post, index) => (
+        <SwiperSlide key={index}>
+        <SwiperSlide>
+        <IntroPage/>
+        </SwiperSlide>
+        <SwiperSlide>
+        <QuestionProps shopName ={post?.name} city ="NY, brooklyn" description = {post?.description} recommendation= {post?.id} skinType ={post?.concerns} age ="26" concern1={post?.labels} concern2= {post?.labels}/>
+        </SwiperSlide>
+        <SwiperSlide>
+           <FirstintroPage key = {index} post = {post} /> 
+           </SwiperSlide>
+         
+        </SwiperSlide>
+        
+        ))}
+
 
       
-       {/*<Login/>
-       <MainPage/>
-       */}
-       <SwiperSlide>
-       <VerticalPage/>
-       </SwiperSlide>
-
-       <SwiperSlide>
-       <QuestionPage/>
-       </SwiperSlide>
-
       
        </Swiper>
+      {/*
+       {qst.data.map((post, index) => (
+           
+        ))}
+      </Layout>*/}
       </div>
-      </div>
-      
-     
-       
-      {/*</Layout>*/}
     </>
   )
 }
 
+export async function getStaticProps(){
+  const res = await fetch('http://35.209.3.225:5000/routine');
+  const qst= await res.json();
 
+  return{
+    props: {qst},
+
+  };
+
+}
