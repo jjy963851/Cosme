@@ -2,36 +2,31 @@ import ArrowCircleUpTwoToneIcon from '@mui/icons-material/ArrowCircleUpTwoTone';
 import ArrowCircleRightTwoToneIcon from '@mui/icons-material/ArrowCircleRightTwoTone';
 import ArrowCircleLeftTwoToneIcon from '@mui/icons-material/ArrowCircleLeftTwoTone';
 import ArrowCircleDownTwoToneIcon from '@mui/icons-material/ArrowCircleDownTwoTone';
+import Link from 'next/link';
 export default function IntroPage(){
     return(
         <>
-        
-        <div className="w-full lg:w-2/3 mx-auto pt-2 ">
-        <div className = " mx-auto border-2 bg-amber-50 border-gray-200 border-opacity-60  py-8 rounded-xl shadow-md overflow-hidden">
+        <div className='h-screen flex justify-center items-center'>
+        <div className="w-full mx-auto pt-2 ">
+        <div className = " mx-auto border-2 bg-amber-50 border-gray-200 border-opacity-60  py-16 lg:py-40 rounded-xl shadow-md overflow-hidden">
         <div className = "flex flex-col w-5/6 pl-3">
-            <h1 className = " font-bold text-3xl pb-2"> Where we heard it</h1>
-            <p className = "font-semibold text-xl pb-5">The Neighborhood</p>
-            <p classname = "font-semibold text-md pb-3">Swipe up<ArrowCircleUpTwoToneIcon/> and Down<ArrowCircleDownTwoToneIcon/> to get to the next post</p>
-            <p classname = "font-semibold text-md ">Swipe Left<ArrowCircleLeftTwoToneIcon/> and Right<ArrowCircleRightTwoToneIcon/> to see the product details</p>
+            <h1 className = " italic font-bold text-3xl lg:text-5xl pb-2 lg:pb-5"> Where we heard it</h1>
+            <p className = "italic font-semibold text-xl lg:text-3xl pb-5 lg:mb-10">The Neighborhood</p>
+            <p className=" font-semibold text-xl lg:text-xl pb-3 lg:mb-5">Swipe up<ArrowCircleUpTwoToneIcon/> and Down<ArrowCircleDownTwoToneIcon/> to get to the next post</p>
+            <p className=" font-semibold text-xl lg:text-xl">Swipe Left<ArrowCircleLeftTwoToneIcon/> and Right<ArrowCircleRightTwoToneIcon/> to see the product details</p>
             
         </div>
         </div>
+        <div className='pt-3'></div>
+        <Link href="/mainpage" legacyBehavior>
+        <div className = " mx-auto border-2 bg-neutral-100 border-gray-200 border-opacity-60  py-2 rounded-xl shadow-md overflow-hidden transition duration-300 transform lg:hover:scale-105 hover:scale-95">    
+        <p className=' flex justify-center font-semibold text-md text-slate-600'>Move to Month Magazine</p>
         
-{/**<div className="py-2"></div>
-        <div className = " mx-auto border-2 bg-slate-200 border-gray-200 border-opacity-60  py-3 rounded-xl shadow-md overflow-hidden">
-        <div className = "flex flex-col w-4/5 pl-3">
-            <h1 className = " font-bold text-3xl pb-2"> Question</h1>
-            <p classname = "font-semibold text-md pb-3">Skin type, age, target concerns</p>
-            
+        </div>  
+        </Link> 
+         
         </div>
-        </div> */}
-        
         </div>
-
-
-        
-        
-       
         </>
         
     );

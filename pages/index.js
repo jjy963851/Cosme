@@ -43,13 +43,17 @@ export default function Home({qst}) {
      
       modules={[Keyboard]}
     >
-        
+        <SwiperSlide>
+          <div className=''>
+        <IntroPage/>
+        </div>
+        </SwiperSlide>
 
         {qst.data.map((post, index) => (
           <>
         <SwiperSlide key={index}>
           <div className="h-screen flex flex-col justify-center items-center">
-        <IntroPage/>
+       
         <QuestionProps shopName ={post?.name} city ="NY, brooklyn" description = {post?.description} recommendation= {post?.id} skinType ={post?.concerns} age ="26" concern1={post?.labels} concern2= {post?.labels}/>
         </div>
        </SwiperSlide>
