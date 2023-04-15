@@ -28,9 +28,9 @@ export default function Home({qst}) {
       {/*<Layout>*/}
         
        
-      <div className='py-2lg:pt-2 px-5 '>
+      <div className='py-2 lg:pt-2 px-5 '>
       <Swiper
-      className='min-h-screen    lg:w-3/4 mx-auto '
+      className='min-h-screen max-h-screen lg:w-3/4 mx-auto '
       rewind ={true}
       slidesPerView={"1"}
       autoHeight

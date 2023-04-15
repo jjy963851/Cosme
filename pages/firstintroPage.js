@@ -13,7 +13,7 @@ export default function FirstintroPage(props){
     return(
         <>
          <Swiper
-      className = "min-h-screen  mx-auto"     
+      className = "min-h-screen max-h-screen mx-auto"     
       rewind ={true}
       slidesPerView={"1"}
      
