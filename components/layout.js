@@ -9,15 +9,15 @@ import MainNav from "./mainNav";
 
 export default function Layout({children}){
     return(
-        
-        <div className ="w-full p-0">
-            
-        <Sidebar/>
+        <>
         <MainNav/>
+        <div className="lg:-mt-40">
+        <Sidebar/>
+        </div>   
         {children}
         <MobileNav/>   
             
-        </div>
+        </> 
         
     );
 }

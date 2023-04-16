@@ -28,10 +28,10 @@ export default function Sidebar(props){
       //Upper menu control
       
         <div>
-          <div className ="hidden md:block">
+          <div className ="hidden md:block max-h-screen">
             <nav className = "bg-white">
               {/**when screen become large, x margin is auto filled sm: means when screen become small lg: also same px is padding to x*/}
-              <div className = "max-w-auto mx-auto px-2 sm:px-6 lg:px-8">
+              <div className = " mx-auto px-2 sm:px-6 lg:px-8">
                 {/** flex container. justify between means 좌우마지막에 정렬 */}
                 <div className ="flex items-center justify-between h-16">
                   {/** 상단 메뉴 */}
