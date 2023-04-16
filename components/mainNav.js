@@ -20,7 +20,7 @@ export default function MainNav(){
         <Link href="/favorite" className="w-2">
           <SearchIcon />
         </Link>
-        <Link href="/routine" className="w-2">
+        <Link href="/savedPage" className="w-2">
           <AddToQueueIcon />
         </Link>
         <Link href="/favorite" className="w-2">
