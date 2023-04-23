@@ -5,15 +5,18 @@ import {Keyboard, Pagination, Navigation} from "swiper";
 import CardProps2 from '@/components/card_props2'
 import Layout from '@/components/layout';
 import 'swiper/css';
+import { useState } from 'react';
 import ROUTINE_API from '@/config';
+import SearchBar from './searchBar';
 
 export default function Routine({data}){
+  
     return(
         <>
         
         <Layout>
            <Swiper
-      className = " max-h-screen min-h-screen  lg:w-3/4 mx-auto"     
+      className =  {`max-h-screen min-h-screen  lg:w-3/4 mx-auto `}    
      slidesPerView={"auto"}
      rewind ={true}
       direction={"vertical"}
@@ -34,7 +37,9 @@ export default function Routine({data}){
          </SwiperSlide>
         ))}
 
-        
+         
+
+
         </Swiper>      
         </Layout>
         </>
@@ -43,6 +48,8 @@ export default function Routine({data}){
 
     );
 }
+
+
 
 export async function getStaticProps(){
     const res = await fetch('http://35.209.3.225:5000/routine');

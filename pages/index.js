@@ -14,6 +14,10 @@ import 'swiper/css';
 import QuestionProps from '@/components/question_props';
 import IntroProps from '@/components/intro_props';
 import FirstintroPage from './firstintroPage';
+import Insturction from './Instruction';
+import WhereWeHeardIt from './WhereWeHeardIt';
+import IntroProfileCard from './introProfileCard';
+import IntroProfileProduct from './IntroProfileProduct';
 export default function Home({qst}) {
  
  
@@ -28,7 +32,7 @@ export default function Home({qst}) {
       {/*<Layout>*/}
         
        
-      <div className='py-2 lg:pt-2 px-5 '>
+      <div className='py-2 lg:pt-2  '>
       <Swiper
       className='min-h-screen max-h-screen lg:w-3/4 mx-auto '
       rewind ={true}
@@ -44,10 +48,24 @@ export default function Home({qst}) {
       modules={[Keyboard]}
     >
         <SwiperSlide>
-          <div className=''>
-        <IntroPage/>
-        </div>
+          <div className='px-5'>
+          <Insturction/>
+          </div>
         </SwiperSlide>
+        
+        <SwiperSlide>
+        <div className='px-5'>
+          <WhereWeHeardIt/>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+       
+          <IntroProfileCard/>
+          
+        </SwiperSlide>
+
+        
 
         {qst.data.map((post, index) => (
           <>
@@ -58,7 +76,7 @@ export default function Home({qst}) {
         </div>
        </SwiperSlide>
        <SwiperSlide key={index +1}>
-       <div className="h-screen flex justify-center items-center mt-40">
+       <div className="h-screen flex justify-center items-center ">
         <FirstintroPage key = {index} post = {post} />
         </div>
         </SwiperSlide>
@@ -75,7 +93,9 @@ export default function Home({qst}) {
           
            ))} 
        
-      </Layout>*/}
+      </Layout> 
+
+*/}
       </div>
     </>
   )
@@ -83,11 +103,11 @@ export default function Home({qst}) {
 
 export async function getStaticProps(){
   const res = await fetch('http://35.209.3.225:5000/routine');
-  const qst= await res.json();
+   const qst= await res.json();
+ 
+   return{
+     props: {qst},
+ 
+   };
 
-  return{
-    props: {qst},
-
-  };
-
-}
+  }

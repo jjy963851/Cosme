@@ -10,8 +10,8 @@ export default function IntroPage(){
         <div className="w-full mx-auto pt-2 ">
         <div className = " mx-auto border-2 bg-amber-50 border-gray-200 border-opacity-60  py-16 lg:py-40 rounded-xl shadow-md overflow-hidden">
         <div className = "flex flex-col w-5/6 pl-3">
-            <h1 className = " italic font-bold text-3xl lg:text-5xl pb-2 lg:pb-5"> Where we heard it</h1>
-            <p className = "italic font-semibold text-xl lg:text-3xl pb-5 lg:mb-10">The Neighborhood</p>
+            <h1 className = " italic font-bold text-3xl lg:text-5xl pb-8 lg:pb-10">How To Use </h1>
+            
             <p className=" font-semibold text-xl lg:text-xl pb-3 lg:mb-5">Swipe up<ArrowCircleUpTwoToneIcon/> and Down<ArrowCircleDownTwoToneIcon/> to get to the next post</p>
             <p className=" font-semibold text-xl lg:text-xl">Swipe Left<ArrowCircleLeftTwoToneIcon/> and Right<ArrowCircleRightTwoToneIcon/> to see the product details</p>
             

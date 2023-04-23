@@ -5,7 +5,8 @@ import {Keyboard, Pagination, Navigation} from "swiper";
 import IntroPage from "./introPage";
 import QuestionPage from "./questionPage";
 import QuestionProps from "@/components/question_props";
-
+import CardProps from "@/components/card_props";
+import IntroProfileCard from "./introProfileCard";
 export default function FirstintroPage(props){
     const post = props.post;
 
@@ -29,12 +30,19 @@ export default function FirstintroPage(props){
        
 
        {post?.steps.map((post, index)=>(
+        <>
         <SwiperSlide key = {index}> 
-        <IntroProps productName ={post?.productName}  productBrand ={post?.brand_name} productDescription={post?.description}/>
+       
+        <CardProps key={post?.id} productTitle ={post?.step_type} ProductName ={post?.product_name} BrandName = {post?.brand_name} ProductDetail = {post?.description}
+              productImage = {post?.image_url}
+              />
         </SwiperSlide>
-
+        </>
         ))} 
 
+{/** 
+              
+              <IntroProps productName ={post?.productName}  productBrand ={post?.brand_name} productDescription={post?.description}/>*/}
     </Swiper>
         </>
     );

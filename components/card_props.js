@@ -15,7 +15,7 @@ export default function CardProps(props){
     return(
          /**padding 4, small size screen, card size will be half of the screen */
         /** this container will make overall card will responsive  */
-        <div className = " w-full h-full lg:w-2/3 mx-auto  overflow-hidden">
+        <div className = " w-full min-h-screen  lg:w-2/3 mx-auto  overflow-hidden">
 
             {/** this is image control! height full, border-2 테두리 opacity=투명도 */}
             <div className = "grid">
